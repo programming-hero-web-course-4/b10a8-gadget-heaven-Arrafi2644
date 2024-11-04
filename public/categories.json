@@ -1,0 +1,22 @@
+[
+    {
+        "category_id": "C001",
+        "category_name": "Laptops"
+    },
+    {
+        "category_id": "P001",
+        "category_name": "Phones"
+    },
+    {
+        "category_id": "S001",
+        "category_name": "Smart Watches"
+    },
+    {
+        "category_id": "CH001",
+        "category_name": "Chargers"
+    },
+    {
+        "category_id": "PB001",
+        "category_name": "Power Banks"
+    }
+]

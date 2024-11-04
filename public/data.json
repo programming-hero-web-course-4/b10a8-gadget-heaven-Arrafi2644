@@ -1,0 +1,309 @@
+[
+    {
+        "product_id": "C003",
+        "product_title": "HP Spectre x360 14",
+        "product_image": "https://i.ibb.co.com/Jt7T2Cy/1.jpg",
+        "category": "Laptops",
+        "price": 1399,
+        "description": "2-in-1 laptop with high performance and a stunning OLED display.",
+        "specification": [
+            "13.5-inch OLED touchscreen",
+            "Intel Core i7 12th Gen",
+            "16GB RAM",
+            "512GB SSD",
+            "Up to 15 hours battery life"
+        ],
+        "availability": true,
+        "rating": 4.8
+    },
+    
+    {
+        "product_id": "S003",
+        "product_title": "Fitbit Charge 5",
+        "product_image": "https://i.ibb.co.com/nfPs566/17.jpg",
+        "category": "Smart Watches",
+        "price": 149,
+        "description": "Advanced health and fitness tracker with ECG and stress management.",
+        "specification": [
+            "AMOLED color display",
+            "Heart rate and SpO2 monitoring",
+            "Built-in GPS",
+            "Up to 7 days battery life",
+            "Water resistant"
+        ],
+        "availability": true,
+        "rating": 4.4
+    },
+    {
+        "product_id": "PB002",
+        "product_title": "RAVPower 20000mAh Portable Charger",
+        "product_image": "https://i.ibb.co.com/gyKQrTh/2.jpg",
+        "category": "Power Banks",
+        "price": 39,
+        "description": "Reliable portable charger with high capacity and fast charging.",
+        "specification": [
+            "20000mAh capacity",
+            "Dual USB-A output",
+            "LED indicator",
+            "Compact design",
+            "Fast charging supported"
+        ],
+        "availability": true,
+        "rating": 4.6
+    },
+    {
+        "product_id": "L005",
+        "product_title": "ASUS ROG Zephyrus G14",
+        "product_image": "https://i.ibb.co.com/HDCGtLy/3.jpg",
+        "category": "Laptops",
+        "price": 1499,
+        "description": "High-performance gaming laptop with a compact design.",
+        "specification": [
+            "14-inch QHD display",
+            "AMD Ryzen 9",
+            "32GB RAM",
+            "1TB SSD",
+            "NVIDIA GeForce RTX 3060"
+        ],
+        "availability": true,
+        "rating": 4.7
+    },
+    {
+        "product_id": "P002",
+        "product_title": "Samsung Galaxy S23 Ultra",
+        "product_image": "https://i.ibb.co.com/2WBHN8D/4.jpg",
+        "category": "Phones",
+        "price": 1199,
+        "description": "Discover the power of the Galaxy S23 Ultra with cutting-edge features.",
+        "specification": [
+            "6.8-inch QHD+ Dynamic AMOLED 2X",
+            "Snapdragon 8 Gen 2",
+            "Quad-camera system",
+            "S Pen support",
+            "Up to 1TB storage"
+        ],
+        "availability": true,
+        "rating": 4.7
+    },
+    {
+        "product_id": "L006",
+        "product_title": "Microsoft Surface Laptop 5",
+        "product_image": "https://i.ibb.co.com/kybYWRb/18.jpg",
+        "category": "Laptops",
+        "price": 1199,
+        "description": "Stylish laptop with a touchscreen and a high-resolution display.",
+        "specification": [
+            "13.5-inch PixelSense display",
+            "Intel Core i5 12th Gen",
+            "16GB RAM",
+            "512GB SSD",
+            "Up to 18 hours battery life"
+        ],
+        "availability": true,
+        "rating": 4.6
+    },
+    {
+        "product_id": "CH002",
+        "product_title": "Samsung 45W Super Fast Charger",
+        "product_image": "https://i.ibb.co.com/F6kRf2d/6.jpg",
+        "category": "Chargers",
+        "price": 29,
+        "description": "Fast charge your devices with Samsung's 45W charger.",
+        "specification": [
+            "45W USB-C Power Delivery",
+            "Compatible with Galaxy and other USB-C devices",
+            "Overcurrent protection",
+            "Compact design"
+        ],
+        "availability": true,
+        "rating": 4.7
+    },
+    {
+        "product_id": "L007",
+        "product_title": "Acer Swift 5",
+        "product_image": "https://i.ibb.co.com/fr20wn4/7.jpg",
+        "category": "Laptops",
+        "price": 899,
+        "description": "Ultralight laptop with a high-resolution touchscreen.",
+        "specification": [
+            "14-inch Full HD touchscreen",
+            "Intel Core i7 11th Gen",
+            "16GB RAM",
+            "512GB SSD",
+            "Up to 15 hours battery life"
+        ],
+        "availability": true,
+        "rating": 4.5
+    },
+    {
+        "product_id": "P001",
+        "product_title": "Apple iPhone 15 Pro Max",
+        "product_image": "https://i.ibb.co.com/By3pn0G/8.jpg",
+        "category": "Phones",
+        "price": 1299,
+        "description": "Experience the ultimate smartphone with the iPhone 15 Pro Max.",
+        "specification": [
+            "6.7-inch Super Retina XDR display",
+            "A17 Bionic chip",
+            "Triple-camera system",
+            "LiDAR Scanner",
+            "Up to 2TB storage"
+        ],
+        "availability": true,
+        "rating": 4.8
+    },
+    {
+        "product_id": "PB002",
+        "product_title": "RAVPower 20000mAh Portable Charger",
+        "product_image": "https://i.ibb.co.com/2cnNvgj/15.jpg",
+        "category": "Power Banks",
+        "price": 39,
+        "description": "Reliable portable charger with high capacity and fast charging.",
+        "specification": [
+            "20000mAh capacity",
+            "Dual USB-A output",
+            "LED indicator",
+            "Compact design",
+            "Fast charging supported"
+        ],
+        "availability": true,
+        "rating": 4.6
+    },
+    {
+        "product_id": "S001",
+        "product_title": "Apple Watch Series 9",
+        "product_image": "https://i.ibb.co.com/92Qx8KB/19.jpg",
+        "category": "Smart Watches",
+        "price": 399,
+        "description": "Stay connected with health insights and notifications.",
+        "specification": [
+            "1.9-inch LTPO OLED display",
+            "Blood Oxygen and ECG sensors",
+            "S9 chip",
+            "Up to 18 hours battery life",
+            "Water resistant"
+        ],
+        "availability": true,
+        "rating": 4.6
+    },
+    {
+        "product_id": "P003",
+        "product_title": "Google Pixel 8 Pro",
+        "product_image": "https://i.ibb.co.com/pQjT4Fd/20.jpg",
+        "category": "Phones",
+        "price": 1099,
+        "description": "Experience the latest Google technology with powerful AI and a stunning display.",
+        "specification": [
+            "6.7-inch LTPO OLED display",
+            "Google Tensor G3 chip",
+            "Triple-camera system with advanced AI",
+            "Face Unlock and fingerprint sensor",
+            "Up to 512GB storage"
+        ],
+        "availability": true,
+        "rating": 4.7
+    },
+    {
+        "product_id": "L004",
+        "product_title": "Lenovo ThinkPad X1 Carbon",
+        "product_image": "https://i.ibb.co.com/G9Y0hmy/10.jpg",
+        "category": "Laptops",
+        "price": 1299,
+        "description": "Lightweight and durable, built for business professionals.",
+        "specification": [
+            "14-inch FHD display",
+            "Intel Core i7 11th Gen",
+            "16GB RAM",
+            "1TB SSD",
+            "Up to 19 hours battery life"
+        ],
+        "availability": true,
+        "rating": 4.8
+    },
+    {
+        "product_id": "S002",
+        "product_title": "Samsung Galaxy Watch 6",
+        "product_image": "https://i.ibb.co.com/cLrwzw4/11.jpg",
+        "category": "Smart Watches",
+        "price": 329,
+        "description": "Health tracking and notifications on your wrist.",
+        "specification": [
+            "1.5-inch Super AMOLED display",
+            "Blood Pressure and ECG monitoring",
+            "Exynos W930 processor",
+            "Up to 40 hours battery life",
+            "Water resistant"
+        ],
+        "availability": true,
+        "rating": 4.5
+    },
+    {
+        "product_id": "CH001",
+        "product_title": "Anker PowerPort III Nano Charger",
+        "product_image": "https://i.ibb.co.com/4Pghjv6/12.jpg",
+        "category": "Chargers",
+        "price": 19,
+        "description": "Compact USB-C fast charger with PowerIQ 3.0 technology.",
+        "specification": [
+            "20W USB-C Power Delivery",
+            "Compatible with iPhone, Samsung, and more",
+            "Compact design",
+            "Overload protection"
+        ],
+        "availability": true,
+        "rating": 4.8
+    },
+    {
+        "product_id": "L008",
+        "product_title": "Razer Blade 15",
+        "product_image": "https://i.ibb.co.com/r2WRx2J/13.jpg",
+        "category": "Laptops",
+        "price": 1799,
+        "description": "High-performance gaming laptop with a stunning display.",
+        "specification": [
+            "15.6-inch QHD display",
+            "Intel Core i7 12th Gen",
+            "16GB RAM",
+            "1TB SSD",
+            "NVIDIA GeForce RTX 3070"
+        ],
+        "availability": true,
+        "rating": 4.7
+    },
+    {
+        "product_id": "PB001",
+        "product_title": "Anker PowerCore 20100 Power Bank",
+        "product_image": "https://i.ibb.co.com/k0SJhhT/14.jpg",
+        "category": "Power Banks",
+        "price": 49,
+        "description": "High-capacity power bank for on-the-go charging.",
+        "specification": [
+            "20100mAh capacity",
+            "Dual USB ports",
+            "PowerIQ and VoltageBoost technology",
+            "Fast charging",
+            "Compact and lightweight design"
+        ],
+        "availability": true,
+        "rating": 4.9
+    },
+
+    {
+        "product_id": "P004",
+        "product_title": "OnePlus 11",
+        "product_image": "https://i.ibb.co.com/V3RRyNy/21.jpg",
+        "category": "Phones",
+        "price": 899,
+        "description": "Fast and smooth performance with OnePlus' latest flagship features.",
+        "specification": [
+            "6.7-inch Fluid AMOLED display",
+            "Snapdragon 8 Gen 2",
+            "Triple-camera system with Hasselblad partnership",
+            "5G support",
+            "Up to 256GB storage"
+        ],
+        "availability": true,
+        "rating": 4.6
+    }
+   
+]
