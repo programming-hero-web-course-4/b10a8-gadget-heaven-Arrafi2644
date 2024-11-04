@@ -1,9 +1,11 @@
 import React from 'react';
+import DashBanner from '../components/DashBanner';
 
 const Dashboard = () => {
     return (
         <div>
-            <h2>Dashboard page</h2>
+            <DashBanner></DashBanner>
+
         </div>
     );
 };
