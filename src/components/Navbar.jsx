@@ -5,7 +5,7 @@ import { IoCartOutline, IoHeartOutline } from "react-icons/io5"
 const Navbar = () => {
     return (
         <div className="">
-            <div className="navbar max-w-7xl w-11/12 mx-auto mt-6 rounded-t-xl text-white bg-[#9538E2] p-6">
+            <div className="navbar max-w-7xl w-11/12 mx-auto rounded-t-xl text-white bg-[#9538E2] p-6">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost pl-0 lg:hidden">
