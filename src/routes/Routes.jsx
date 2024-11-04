@@ -6,6 +6,10 @@ import Dashboard from "../pages/Dashboard";
 import HomeMain from "../components/HomeMain";
 import AllProducts from "../components/AllProducts";
 import Laptops from "../components/Laptops";
+import Phones from "../components/Phones";
+import Watches from "../components/Watches";
+import Chargers from "../components/Chargers";
+import PowerBanks from "../components/PowerBanks";
 
 const router = createBrowserRouter([
     {
@@ -22,12 +26,32 @@ const router = createBrowserRouter([
                     {
                      path: '/',
                      element: <AllProducts></AllProducts>,
-                     loader: ()=> fetch('../../public/data.json')
+                     loader: ()=> fetch('/data.json')
                     },
                     {
                         path: `/products/Laptops`,
                         element: <Laptops></Laptops>,
-                        loader: ()=> fetch('../../public/data.json')
+                        loader: ()=> fetch('/data.json')
+                    },
+                    {
+                        path: `/products/Phones`,
+                        element: <Phones></Phones>,
+                        loader: ()=> fetch('/data.json')
+                    },
+                    {
+                        path: `/products/Smart Watches`,
+                        element: <Watches></Watches>,
+                        loader: ()=> fetch('/data.json')
+                    },
+                    {
+                        path: `/products/Chargers`,
+                        element: <Chargers></Chargers>,
+                        loader: ()=> fetch('/data.json')
+                    },
+                    {
+                        path: `/products/Power Banks`,
+                        element: <PowerBanks></PowerBanks>,
+                        loader: ()=> fetch('/data.json')
                     }
                 ]
               }

@@ -4,7 +4,7 @@ import Product from './Product';
 
 const AllProducts = () => {
 
-    const allProducts = useLoaderData();
+    const allProducts = useLoaderData([]);
 
     return (
         <div>

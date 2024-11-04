@@ -2,7 +2,7 @@ import { useLoaderData } from "react-router-dom";
 import Product from "./Product";
 
 const Laptops = () => {
-    const allProducts = useLoaderData();
+    const allProducts = useLoaderData([]);
     console.log(allProducts
 
     );
