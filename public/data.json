@@ -2,7 +2,7 @@
     {
         "product_id": "C003",
         "product_title": "HP Spectre x360 14",
-        "product_image": "https://i.ibb.co.com/Jt7T2Cy/1.jpg",
+        "product_image": "https://i.ibb.co.com/1z60G4m/110.jpg",
         "category": "Laptops",
         "price": 1399,
         "description": "2-in-1 laptop with high performance and a stunning OLED display.",
@@ -22,7 +22,7 @@
         "product_title": "Fitbit Charge 5",
         "product_image": "https://i.ibb.co.com/nfPs566/17.jpg",
         "category": "Smart Watches",
-        "price": 149,
+        "price": 179,
         "description": "Advanced health and fitness tracker with ECG and stress management.",
         "specification": [
             "AMOLED color display",
@@ -39,7 +39,7 @@
         "product_title": "RAVPower 20000mAh Portable Charger",
         "product_image": "https://i.ibb.co.com/gyKQrTh/2.jpg",
         "category": "Power Banks",
-        "price": 39,
+        "price": 110,
         "description": "Reliable portable charger with high capacity and fast charging.",
         "specification": [
             "20000mAh capacity",
@@ -73,7 +73,7 @@
         "product_title": "Samsung Galaxy S23 Ultra",
         "product_image": "https://i.ibb.co.com/2WBHN8D/4.jpg",
         "category": "Phones",
-        "price": 1199,
+        "price": 1129,
         "description": "Discover the power of the Galaxy S23 Ultra with cutting-edge features.",
         "specification": [
             "6.8-inch QHD+ Dynamic AMOLED 2X",
@@ -107,7 +107,7 @@
         "product_title": "Samsung 45W Super Fast Charger",
         "product_image": "https://i.ibb.co.com/F6kRf2d/6.jpg",
         "category": "Chargers",
-        "price": 29,
+        "price": 229,
         "description": "Fast charge your devices with Samsung's 45W charger.",
         "specification": [
             "45W USB-C Power Delivery",
@@ -140,7 +140,7 @@
         "product_title": "Apple iPhone 15 Pro Max",
         "product_image": "https://i.ibb.co.com/By3pn0G/8.jpg",
         "category": "Phones",
-        "price": 1299,
+        "price": 1099,
         "description": "Experience the ultimate smartphone with the iPhone 15 Pro Max.",
         "specification": [
             "6.7-inch Super Retina XDR display",
@@ -157,7 +157,7 @@
         "product_title": "RAVPower 20000mAh Portable Charger",
         "product_image": "https://i.ibb.co.com/2cnNvgj/15.jpg",
         "category": "Power Banks",
-        "price": 39,
+        "price": 89,
         "description": "Reliable portable charger with high capacity and fast charging.",
         "specification": [
             "20000mAh capacity",
@@ -174,7 +174,7 @@
         "product_title": "Apple Watch Series 9",
         "product_image": "https://i.ibb.co.com/92Qx8KB/19.jpg",
         "category": "Smart Watches",
-        "price": 399,
+        "price": 359,
         "description": "Stay connected with health insights and notifications.",
         "specification": [
             "1.9-inch LTPO OLED display",
@@ -191,7 +191,7 @@
         "product_title": "Google Pixel 8 Pro",
         "product_image": "https://i.ibb.co.com/pQjT4Fd/20.jpg",
         "category": "Phones",
-        "price": 1099,
+        "price": 999,
         "description": "Experience the latest Google technology with powerful AI and a stunning display.",
         "specification": [
             "6.7-inch LTPO OLED display",
@@ -208,7 +208,7 @@
         "product_title": "Lenovo ThinkPad X1 Carbon",
         "product_image": "https://i.ibb.co.com/G9Y0hmy/10.jpg",
         "category": "Laptops",
-        "price": 1299,
+        "price": 1229,
         "description": "Lightweight and durable, built for business professionals.",
         "specification": [
             "14-inch FHD display",
@@ -225,7 +225,7 @@
         "product_title": "Samsung Galaxy Watch 6",
         "product_image": "https://i.ibb.co.com/cLrwzw4/11.jpg",
         "category": "Smart Watches",
-        "price": 329,
+        "price": 324,
         "description": "Health tracking and notifications on your wrist.",
         "specification": [
             "1.5-inch Super AMOLED display",
@@ -242,7 +242,7 @@
         "product_title": "Anker PowerPort III Nano Charger",
         "product_image": "https://i.ibb.co.com/4Pghjv6/12.jpg",
         "category": "Chargers",
-        "price": 19,
+        "price": 119,
         "description": "Compact USB-C fast charger with PowerIQ 3.0 technology.",
         "specification": [
             "20W USB-C Power Delivery",
@@ -275,7 +275,7 @@
         "product_title": "Anker PowerCore 20100 Power Bank",
         "product_image": "https://i.ibb.co.com/k0SJhhT/14.jpg",
         "category": "Power Banks",
-        "price": 49,
+        "price": 149,
         "description": "High-capacity power bank for on-the-go charging.",
         "specification": [
             "20100mAh capacity",
@@ -293,7 +293,7 @@
         "product_title": "OnePlus 11",
         "product_image": "https://i.ibb.co.com/V3RRyNy/21.jpg",
         "category": "Phones",
-        "price": 899,
+        "price": 859,
         "description": "Fast and smooth performance with OnePlus' latest flagship features.",
         "specification": [
             "6.7-inch Fluid AMOLED display",
