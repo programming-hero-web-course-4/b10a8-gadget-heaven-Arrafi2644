@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import bannerImg from '../assets/banner.jpg'
 
 const HomeBanner = () => {
+
     return (
        <div className="bg-[#9538E2] w-full px-6 mx-auto pb-28 md:pb-48 lg:pb-64 rounded-b-xl pt-8 md:pt-12 relative mb-[160px] md:mb-[300px] lg:mb-[400px]">
          <div className="text-center text-white">

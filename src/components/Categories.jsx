@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
+import '../components/Category.css'
 
 const Categories = () => {
     const [categories, setCategories] = useState([]);
@@ -12,9 +13,10 @@ const Categories = () => {
     return (
         <div>  
            <div className='flex flex-wrap md:flex-col gap-6 justify-center'>
-            <Link to='/' className='btn h-auto min-h-max py-4 rounded-3xl text-gray-600' >All Products</Link>
+            <NavLink to='/' className='btn h-auto min-h-max py-4 rounded-3xl text-gray-600' >All Products</NavLink>
             {
-                categories.map(category => <Link to={`products/${category.category_name}`} className='btn h-auto min-h-max py-4 rounded-3xl text-gray-600' key={category.category_id} >{category.category_name}</Link>)
+                categories.map(category => <NavLink to={`products/${category.category_name}`} className='btn h-auto min-h-max py-4 rounded-3xl text-gray-600' key={category.category_id} >{category.category_name}</NavLink>)
+                // categories.map(category => <NavLink to={`products/${category.category_name}`} className={({isActive}) => `btn h-auto min-h-max py-4 rounded-3xl text-gray-600 ${isActive ? 'active' : ''}`} key={category.category_id} >{category.category_name}</NavLink>)
             }
            </div>
         </div>

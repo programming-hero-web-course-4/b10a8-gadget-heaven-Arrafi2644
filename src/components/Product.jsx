@@ -2,7 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Product = ({product}) => {
-    console.log(product);
+    // console.log(product);
+
     const {product_id, product_title, product_image, category, price, description, specification, availability, rating } = product;
     return (
         <div className='border rounded-2xl p-6 flex flex-col gap-4'>

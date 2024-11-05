@@ -1,15 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FaStar } from "react-icons/fa6";
 import { IoCartOutline, IoHeartOutline } from "react-icons/io5"
 import { FaRegStar } from "react-icons/fa6";
 import { Link } from 'react-router-dom';
+import { handleGetProductsFromLocal, handleSetProductToLocal, setProductsToLocal } from '.';
+
 
 
 const ProductDetails = ({ currentProduct }) => {
-    console.log(currentProduct);
+    // console.log(currentProduct);
     const { product_id, product_title, product_image, category, price, description, specification, availability, rating } = currentProduct;
+    const [cartProducts, setCartProducts] = useState([])
+    const [isAddedWishlist, setIsAddedWishList] = useState(true)
+    
+
+   const handleAddToCart = (product) => {
+    //    handleGetProductsFromLocal();
+    handleSetProductToLocal(product)
+    
+   }
+
+   const handleWishList = (product) => {
+    setProductsToLocal(product)
+    
+}
+
+
     return (
-        <div className='p-8 bg-white rounded-2xl max-w-7xl w-11/12 mx-auto flex flex-col lg:flex-row gap-6'>
+        <div className='p-8 bg-white rounded-2xl max-w-7xl w-11/12 mx-auto flex flex-col lg:flex-row gap-8'>
             <div className='w-2/5 lg:w-1/3 mx-auto lg:mx-0'>
                 <img className='w-full' src={product_image} alt="" />
             </div>
@@ -22,7 +40,7 @@ const ProductDetails = ({ currentProduct }) => {
                     <span className='text-lg font-semibold text-gray-950'>Specification:</span>
                     <ol className='text-gray-400 mt-3'>
                         {
-                            specification.map((item, index) => <li>{index + 1}.  {item}</li>)
+                            specification.map((item, index) => <li key={index}>{index + 1}.  {item}</li>)
                         }
                     </ol>
                 </div>
@@ -40,8 +58,8 @@ const ProductDetails = ({ currentProduct }) => {
                     </div>
                 </div>
                 <div className='flex items-center gap-4'>
-                    <Link className='btn rounded-3xl text-white bg-[#9538E2] h-auto min-h-max px-4 py-2'>Add to Cart <span className='text-lg'><IoCartOutline /></span></Link>
-                    <Link className="text-gray-950 border font-medium p-2 text-lg rounded-full bg-white"><IoHeartOutline /></Link>
+                    <Link onClick={() => handleAddToCart(currentProduct)} className='btn rounded-3xl text-white bg-[#9538E2] h-auto min-h-max px-4 py-2'>Add to Cart <span className='text-lg'><IoCartOutline /></span></Link>
+                    <Link onClick={()=> handleWishList(currentProduct)} className="text-gray-950 border font-medium p-2 text-lg rounded-full bg-white"><IoHeartOutline /></Link>
                 </div>
             </div>
         </div>

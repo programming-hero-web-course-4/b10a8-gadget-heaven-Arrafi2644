@@ -11,7 +11,9 @@ import Watches from "../components/Watches";
 import Chargers from "../components/Chargers";
 import PowerBanks from "../components/PowerBanks";
 import Details from "../pages/Details";
-import ProductDetails from "../components/ProductDetails";
+
+import WishList from "../components/WishList";
+import Cart from "../components/Cart";
 
 const router = createBrowserRouter([
     {
@@ -66,7 +68,17 @@ const router = createBrowserRouter([
             },
             {
                 path: '/dashboard',
-                element: <Dashboard></Dashboard>
+                element: <Dashboard></Dashboard>,
+                children: [
+                    {
+                        path: '/dashboard/',
+                        element: <Cart></Cart>
+                    },
+                    {
+                        path: '/dashboard/wishlist',
+                        element: <WishList></WishList>
+                    }
+                ]
             },
             {
                 path: `/details/:productId`,

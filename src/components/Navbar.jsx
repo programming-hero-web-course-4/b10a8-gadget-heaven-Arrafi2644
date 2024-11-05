@@ -1,11 +1,28 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { IoCartOutline, IoHeartOutline } from "react-icons/io5"
+import '../components/Navbar.css'
+import { useEffect, useState } from "react";
+import { handleGetProductsFromLocal, handleSetProductToLocal } from ".";
+import Details from "../pages/Details";
 
 
 const Navbar = () => {
+
+    // const [cartProducts, setCartProducts] = useState(0);
+
+    // useEffect(()=>{
+    //    const products =  handleGetProductsFromLocal()
+    //    setCartProducts(products);
+    // }, [])
+
+    // console.log(cartProducts.length);
+
+const {pathname} = useLocation();
+console.log(pathname);
+
     return (
         <div className="">
-            <div className="navbar max-w-7xl w-11/12 mx-auto rounded-t-xl text-white bg-[#9538E2] p-6">
+            <div className={`navbar max-w-7xl w-11/12 mx-auto rounded-t-xl  ${pathname === '/' ? 'text-white bg-[#9538E2]' : 'text-[#9538E2] bg-none'} p-6`}>
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost pl-0 lg:hidden">
@@ -25,23 +42,23 @@ const Navbar = () => {
                         <ul
                             tabIndex={0}
                             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow text-gray-950 ">
-                            <li><NavLink to='/'>Home</NavLink></li>
-                            <li><NavLink to='/statistics'>Statistics</NavLink></li>
-                            <li><NavLink to='/dashboard'>Dashboard</NavLink></li>
+                            <li className="font-bold"><NavLink to='/'>Home</NavLink></li>
+                            <li className="font-bold"><NavLink to='/statistics'>Statistics</NavLink></li>
+                            <li className="font-bold"><NavLink to='/dashboard'>Dashboard</NavLink></li>
                         </ul>
                     </div>
                     <a className="btn btn-ghost pl-0 text-xl font-bold">Gadget Heaven</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
-                        <li><NavLink to='/'>Home</NavLink></li>
-                        <li><NavLink to='/statistics'>Statistics</NavLink></li>
-                        <li><NavLink to='/dashboard'>Dashboard</NavLink></li>
+                        <li className="font-bold"><NavLink to='/'>Home</NavLink></li>
+                        <li className="font-bold"><NavLink to='/statistics'>Statistics</NavLink></li>
+                        <li className="font-bold"><NavLink to='/dashboard'>Dashboard</NavLink></li>
                     </ul>
                 </div>
                 <div className="navbar-end flex gap-2 items-center">
-                    <Link className="text-gray-950 font-medium p-2 text-lg rounded-full bg-white"> <IoCartOutline /></Link>
-                    <Link className="text-gray-950 font-medium p-2 text-lg rounded-full bg-white"><IoHeartOutline /></Link>
+                    <Link to='/dashboard' className={`text-gray-950 font-medium p-2 text-lg rounded-full border ${pathname === '/' ? 'bg-white' : 'bg-none'} `}> <IoCartOutline /> <span></span></Link>
+                    <Link to='/dashboard/wishlist' className={`text-gray-950 font-medium p-2 text-lg rounded-full border ${pathname === '/' ? 'bg-white' : 'bg-none'}`}><IoHeartOutline /></Link>
                 </div>
             </div>
         </div>
