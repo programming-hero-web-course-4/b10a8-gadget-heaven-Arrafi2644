@@ -17,11 +17,11 @@ const About = () => {
                     <div className="hero-content flex-col lg:flex-row-reverse gap-6">
                         <div className='w-full md:w-1/2'>
                         <img
-                            src={aboutImg}
+                            src='https://i.ibb.co.com/ZNTf5RB/about-D93-MGy-SC.jpg'
                             className=" rounded-lg shadow-2xl w-full" />
                         </div>
                         <div className='w-full md:w-1/2'>
-                            <h3 className="text-2xl font-semibold">Who we are</h3>
+                            <h3 className="text-2xl font-semibold mb-2">Who we are</h3>
                             <h2 className="text-4xl md:text-5xl font-bold">About market</h2>
                             <p className="py-6">
                                 At Gadget Heaven, we specialize in providing high-quality tech accessories and gadgets through a seamless eCommerce experience. Discover innovative, reliable products designed to enhance your digital life, all curated to meet your needs and elevate your tech lifestyle.
