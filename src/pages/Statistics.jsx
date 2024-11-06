@@ -1,13 +1,15 @@
 import { Helmet } from "react-helmet";
 import StatisticBanner from "../components/StatisticBanner";
+import Graph from "../components/Graph";
 
 
 const Statistics = () => {
     return (
         <div>
-            <StatisticBanner>
+            <StatisticBanner> </StatisticBanner>
+
+            <Graph></Graph>
             
-            </StatisticBanner>
             <Helmet>
                 <meta charSet="utf-8" />
                 <title>Statistics - Gadget Heaven</title>
