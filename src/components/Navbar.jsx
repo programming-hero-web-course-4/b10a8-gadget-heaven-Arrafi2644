@@ -1,4 +1,4 @@
-import { Link, NavLink, useLocation } from "react-router-dom";
+import { Link, NavLink, useLoaderData, useLocation } from "react-router-dom";
 import { IoCartOutline, IoHeartOutline } from "react-icons/io5"
 import '../components/Navbar.css'
 import { useEffect, useState } from "react";
@@ -8,27 +8,21 @@ import Details from "../pages/Details";
 
 const Navbar = () => {
 
-    const [data, setData] = useState();
-    const [cartProducts, setCartProducts] = useState(0);
-    const [wishlist, setWishList] = useState(0);
+    // const data = useLoaderData();
 
-    useEffect(()=>{
-        fetch('/data.json')
-        .then(res => res.json())
-        .then(data => setData(data))
-    }, [])
+    // const [cartProducts, setCartProducts] = useState(0);
+    // const [wishlist, setWishList] = useState(0);
 
-    useEffect(()=>{
-       const products =  handleGetProductsFromLocal()
-       setCartProducts(products.length);
-       const wishlistProducts = getProductsFromLocal()
-       setWishList(wishlistProducts.length);
-    }, [data])
+  
 
-    // console.log(cartProducts.length);
+    // useEffect(()=>{
+    //    const products =  handleGetProductsFromLocal()
+    //    setCartProducts(products.length);
+    //    const wishlistProducts = getProductsFromLocal()
+    //    setWishList(wishlistProducts.length);
+    // }, [data])
 
 const {pathname} = useLocation();
-// console.log(pathname);
 
     return (
         <div className="">
@@ -69,8 +63,8 @@ const {pathname} = useLocation();
                     </ul>
                 </div>
                 <div className="navbar-end flex gap-2 items-center">
-                    <Link to='/dashboard' className={`relative text-gray-950 font-medium p-2 text-lg rounded-full border ${pathname === '/' ? 'bg-white' : 'bg-none'} `}> <IoCartOutline /> <span className="absolute -top-3 right-1 text-green-400">{cartProducts}</span></Link>
-                    <Link to='/dashboard/wishlist' className={` relative text-gray-950 font-medium p-2 text-lg rounded-full border ${pathname === '/' ? 'bg-white' : 'bg-none'}`}><IoHeartOutline /><span className="absolute -top-3 right-1 text-green-400">{wishlist}</span></Link>
+                    <Link to='/dashboard' className={`relative text-gray-950 font-medium p-2 text-lg rounded-full border ${pathname === '/' ? 'bg-white' : 'bg-none'} `}> <IoCartOutline /></Link>
+                    <Link to='/dashboard/wishlist' className={` relative text-gray-950 font-medium p-2 text-lg rounded-full border ${pathname === '/' ? 'bg-white' : 'bg-none'}`}><IoHeartOutline /></Link>
                 </div>
             </div>
         </div>

@@ -3,7 +3,7 @@ import '../components/DashBanner.css'
 
 const DashBanner = ({heading, subheading}) => {
     const {pathname} = useLocation();
-    console.log(pathname);
+    // console.log(pathname);
     return (
         <div className="py-8 bg-[#9538E2] ">
              <div className="w-11/12 md:h-4/5 lg:w-3/5 mx-auto text-white text-center">

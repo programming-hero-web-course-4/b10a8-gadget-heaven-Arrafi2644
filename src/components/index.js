@@ -32,7 +32,7 @@ const handleSetProductToLocal = (product) => {
     cartProducts.push(product)
     // console.log(cartProducts);
     localStorage.setItem('cart', JSON.stringify(cartProducts));
-    toast.success("Successfully added to the cart", {
+    toast.success("Successfully added to the cart list.", {
         position: 'top-center'
     })
 
@@ -40,12 +40,12 @@ const handleSetProductToLocal = (product) => {
 
 // remove 
 const handleRemoveProductFromLocal = (product) => {
-    console.log("Product removed", product);
+    // console.log("Product removed", product);
     // const cartProducts = handleGetProductsFromLocal();
     const cartProducts = handleGetProductsFromLocal();
     const remaining = cartProducts.filter(item => item.product_id !== product.product_id)
     localStorage.setItem('cart', JSON.stringify(remaining));
-    toast.warn("Successfully removed to the cart" , {
+    toast.warn("Successfully removed product from the cart list" , {
         position: 'top-center'
     })
 }

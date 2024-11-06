@@ -9,7 +9,6 @@ import { Link, useNavigate } from 'react-router-dom';
 
 const Cart = () => {
 
-    const [price , setPrice ] = useState(0);
     const [products, setProducts] = useState([]);
     const [isPurchase, setIsPurchase] = useState(false);
 
@@ -30,32 +29,23 @@ const Cart = () => {
         setProducts(sortedProducts)
     }
 
-
-    useEffect(()=>{
-     const allPrices = products.map(p => p.price);
-     console.log(allPrices);
- 
-     const totalPrice = allPrices.reduce((prev, current) => prev + current, 0)
-     setPrice(totalPrice)
-     console.log(totalPrice);
-    }, [])
-     //    console.log(totalPrice);
-     console.log(price);
-
-
     const handlePurchase = () => {
         const products = [];
         setProducts(products)
-         localStorage.clear('cart');
+         localStorage.removeItem('cart');
          setIsPurchase(true);
-         
     }
+
     const navigate = useNavigate();
     const handleBackToHome = () => {
-       
         navigate('/')
     }
 
+    const price = products?.reduce((acc, current)=>{
+       return acc + current.price;
+    }, 0)
+
+    // console.log(price);
 
 
     return (
@@ -68,7 +58,7 @@ const Cart = () => {
                     </div>
                     <div className='flex gap-4'>
                         <button onClick={handleShort} className="btn btn-outline rounded-3xl text-[#9538E2] hover:bg-[#9538E2] hover:text-white">Sort by Price</button>
-                        <button disabled={isPurchase}  onClick={()=>{document.getElementById('my_modal_1').showModal(); handlePurchase()}} className="btn active rounded-3xl">Purchase</button>
+                        <button disabled={isPurchase}  onClick={()=>{document.getElementById('my_modal_1').showModal(); }} className="btn active rounded-3xl">Purchase</button>
                         
                     </div>
                 </div>
@@ -95,7 +85,7 @@ const Cart = () => {
     <div className="modal-action justify-center w-full">
       <form method="dialog" className='w-full'>
         {/* if there is a button in form, it will close the modal */}
-        <button onClick={handleBackToHome} className="btn w-full">Close</button>
+        <button onClick={()=>{handlePurchase(), handleBackToHome} } className="btn w-full">Close</button>
       </form>
     </div>
   </div>
