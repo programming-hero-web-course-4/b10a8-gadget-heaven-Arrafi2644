@@ -15,7 +15,12 @@ const Cart = () => {
     useEffect(() => {
         const cartList = handleGetProductsFromLocal();
         setProducts(cartList)
-
+        // console.log(products);
+        if(cartList.length < 1){
+            setIsPurchase(true)
+        }else{
+            setIsPurchase(false)
+        }
     }, [])
 
     const handleRemoveProduct = (product) => {
@@ -36,14 +41,18 @@ const Cart = () => {
          setIsPurchase(true);
     }
 
+    
+
     const navigate = useNavigate();
     const handleBackToHome = () => {
         navigate('/')
     }
 
+
     const price = products?.reduce((acc, current)=>{
        return acc + current.price;
     }, 0)
+
 
     // console.log(price);
 
@@ -58,7 +67,7 @@ const Cart = () => {
                     </div>
                     <div className='flex gap-4'>
                         <button onClick={handleShort} className="btn btn-outline rounded-3xl text-[#9538E2] hover:bg-[#9538E2] hover:text-white">Sort by Price</button>
-                        <button disabled={isPurchase}  onClick={()=>{document.getElementById('my_modal_1').showModal(); }} className="btn active rounded-3xl">Purchase</button>
+                        <button disabled={isPurchase}   onClick={()=>{document.getElementById('my_modal_1').showModal(); }} className="btn active rounded-3xl">Purchase</button>
                         
                     </div>
                 </div>
