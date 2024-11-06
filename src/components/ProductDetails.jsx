@@ -3,7 +3,7 @@ import { FaStar } from "react-icons/fa6";
 import { IoCartOutline, IoHeartOutline } from "react-icons/io5"
 import { FaRegStar } from "react-icons/fa6";
 import { Link } from 'react-router-dom';
-import { handleGetProductsFromLocal, handleSetProductToLocal, setProductsToLocal } from '.';
+import { getProductsFromLocal, handleGetProductsFromLocal, handleSetProductToLocal, setProductsToLocal } from '.';
 
 
 
@@ -11,19 +11,21 @@ const ProductDetails = ({ currentProduct }) => {
     // console.log(currentProduct);
     const { product_id, product_title, product_image, category, price, description, specification, availability, rating } = currentProduct;
     const [cartProducts, setCartProducts] = useState([])
-    const [isAddedWishlist, setIsAddedWishList] = useState(true)
+    const [isAddedWishlist, setIsAddedWishList] = useState(false)
     
+    const favoriteProducts = getProductsFromLocal()
+    console.log(favoriteProducts);
 
-   const handleAddToCart = (product) => {
-    //    handleGetProductsFromLocal();
-    handleSetProductToLocal(product)
-    
-   }
+    const handleAddToCart = (product) => {
+        //    handleGetProductsFromLocal();
+        handleSetProductToLocal(product)
 
-   const handleWishList = (product) => {
-    setProductsToLocal(product)
-    
-}
+    }
+
+    const handleWishList = (product) => {
+        setProductsToLocal(product)
+        setIsAddedWishList(true)
+    }
 
 
     return (
@@ -47,19 +49,31 @@ const ProductDetails = ({ currentProduct }) => {
                 <div className='flex flex-col gap-3'>
                     <span className='flex items-center gap-1 text-lg font-semibold text-gray-950'>Rating <span className='text-yellow-400'><FaStar /></span></span>
                     <div className='flex gap-3 items-center'>
-                        <ul className='flex'>
+                        {/* <ul className='flex'>
                             <li className='text-yellow-400'><FaStar /></li>
                             <li className='text-yellow-400'><FaStar /></li>
                             <li className='text-yellow-400'><FaStar /></li>
                             <li className='text-yellow-400'><FaStar /></li>
                             <li className=''><FaRegStar /></li>
-                        </ul>
+                        </ul> */}
+                        <div className="rating">
+                            <input type="radio" name="rating-2" className="mask mask-star-2 h-4 bg-yellow-400" />
+                            <input
+                                type="radio"
+                                name="rating-2"
+                                className="mask mask-star-2 h-4 bg-yellow-400"
+                                defaultChecked />
+                            <input type="radio" name="rating-2" className="mask mask-star-2 h-4 bg-yellow-400" defaultChecked/>
+                            <input type="radio" name="rating-2" className="mask mask-star-2 h-4  bg-yellow-400" defaultChecked/>
+                            <input type="radio" name="rating-2" className="mask mask-star-2 h-4 bg-yellow-400" />
+                        </div>
                         <button className="btn rounded-2xl h-auto min-h-fit py-2">{rating}</button>
                     </div>
                 </div>
                 <div className='flex items-center gap-4'>
                     <Link onClick={() => handleAddToCart(currentProduct)} className='btn rounded-3xl text-white bg-[#9538E2] h-auto min-h-max px-4 py-2'>Add to Cart <span className='text-lg'><IoCartOutline /></span></Link>
-                    <Link onClick={()=> handleWishList(currentProduct)} className="text-gray-950 border font-medium p-2 text-lg rounded-full bg-white"><IoHeartOutline /></Link>
+                    <Link> <button disabled={isAddedWishlist} onClick={() => handleWishList(currentProduct)} className="text-gray-950 border font-medium p-2 text-lg rounded-full bg-white"><IoHeartOutline /></button></Link>
+                    
                 </div>
             </div>
         </div>

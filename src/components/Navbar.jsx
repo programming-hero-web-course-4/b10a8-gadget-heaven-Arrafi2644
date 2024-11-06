@@ -2,23 +2,33 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 import { IoCartOutline, IoHeartOutline } from "react-icons/io5"
 import '../components/Navbar.css'
 import { useEffect, useState } from "react";
-import { handleGetProductsFromLocal, handleSetProductToLocal } from ".";
+import { getProductsFromLocal, handleGetProductsFromLocal, handleSetProductToLocal } from ".";
 import Details from "../pages/Details";
 
 
 const Navbar = () => {
 
-    // const [cartProducts, setCartProducts] = useState(0);
+    const [data, setData] = useState();
+    const [cartProducts, setCartProducts] = useState(0);
+    const [wishlist, setWishList] = useState(0);
 
-    // useEffect(()=>{
-    //    const products =  handleGetProductsFromLocal()
-    //    setCartProducts(products);
-    // }, [])
+    useEffect(()=>{
+        fetch('/data.json')
+        .then(res => res.json())
+        .then(data => setData(data))
+    }, [])
+
+    useEffect(()=>{
+       const products =  handleGetProductsFromLocal()
+       setCartProducts(products.length);
+       const wishlistProducts = getProductsFromLocal()
+       setWishList(wishlistProducts.length);
+    }, [data])
 
     // console.log(cartProducts.length);
 
 const {pathname} = useLocation();
-console.log(pathname);
+// console.log(pathname);
 
     return (
         <div className="">
@@ -45,6 +55,7 @@ console.log(pathname);
                             <li className="font-bold"><NavLink to='/'>Home</NavLink></li>
                             <li className="font-bold"><NavLink to='/statistics'>Statistics</NavLink></li>
                             <li className="font-bold"><NavLink to='/dashboard'>Dashboard</NavLink></li>
+                            <li className="font-bold"><NavLink to='/about'>About Us</NavLink></li>
                         </ul>
                     </div>
                     <a className="btn btn-ghost pl-0 text-xl font-bold">Gadget Heaven</a>
@@ -54,11 +65,12 @@ console.log(pathname);
                         <li className="font-bold"><NavLink to='/'>Home</NavLink></li>
                         <li className="font-bold"><NavLink to='/statistics'>Statistics</NavLink></li>
                         <li className="font-bold"><NavLink to='/dashboard'>Dashboard</NavLink></li>
+                        <li className="font-bold"><NavLink to='/about'>About Us</NavLink></li>
                     </ul>
                 </div>
                 <div className="navbar-end flex gap-2 items-center">
-                    <Link to='/dashboard' className={`text-gray-950 font-medium p-2 text-lg rounded-full border ${pathname === '/' ? 'bg-white' : 'bg-none'} `}> <IoCartOutline /> <span></span></Link>
-                    <Link to='/dashboard/wishlist' className={`text-gray-950 font-medium p-2 text-lg rounded-full border ${pathname === '/' ? 'bg-white' : 'bg-none'}`}><IoHeartOutline /></Link>
+                    <Link to='/dashboard' className={`relative text-gray-950 font-medium p-2 text-lg rounded-full border ${pathname === '/' ? 'bg-white' : 'bg-none'} `}> <IoCartOutline /> <span className="absolute -top-3 right-1 text-green-400">{cartProducts}</span></Link>
+                    <Link to='/dashboard/wishlist' className={` relative text-gray-950 font-medium p-2 text-lg rounded-full border ${pathname === '/' ? 'bg-white' : 'bg-none'}`}><IoHeartOutline /><span className="absolute -top-3 right-1 text-green-400">{wishlist}</span></Link>
                 </div>
             </div>
         </div>

@@ -25,12 +25,16 @@ const handleSetProductToLocal = (product) => {
     const cartProducts = handleGetProductsFromLocal();
     const isExist = cartProducts.find(item => item.product_id == product.product_id)
     if (isExist) {
-        return toast.error("Already added this product")
+        return toast.error("Already added this product" , {
+            position: 'top-center'
+        })
     }
     cartProducts.push(product)
     // console.log(cartProducts);
     localStorage.setItem('cart', JSON.stringify(cartProducts));
-    toast.success("Successfully added to the cart")
+    toast.success("Successfully added to the cart", {
+        position: 'top-center'
+    })
 
 }
 
@@ -41,7 +45,9 @@ const handleRemoveProductFromLocal = (product) => {
     const cartProducts = handleGetProductsFromLocal();
     const remaining = cartProducts.filter(item => item.product_id !== product.product_id)
     localStorage.setItem('cart', JSON.stringify(remaining));
-    toast.warn("Successfully removed to the cart")
+    toast.warn("Successfully removed to the cart" , {
+        position: 'top-center'
+    })
 }
 
 const getProductsFromLocal = () => {
@@ -60,12 +66,16 @@ const setProductsToLocal = (product) => {
     const storedWishProducts = getProductsFromLocal();
     const isExist = storedWishProducts.find(item => item.product_id === product.product_id)
     if (isExist) {
-        return toast.error("Product already added to the wishlist.")
+        return toast.error("Product already added to the wishlist.", {
+            position: 'top-center'
+        })
     }
     storedWishProducts.push(product);
     localStorage.setItem('wishlist', JSON.stringify(storedWishProducts))
     // console.log(storedWishProducts);
-    toast.success("Successfully added product to your wishlist.")
+    toast.success("Successfully added product to your wishlist.", {
+        position: 'top-center'
+    })
 }
 
 const removeProductFromLocal = (product) => {
@@ -73,7 +83,9 @@ const removeProductFromLocal = (product) => {
     // console.log(storedWishProducts);
     const remainingProducts = storedWishProducts.filter(item => item.product_id !== product.product_id)
     localStorage.setItem('wishlist', JSON.stringify(remainingProducts))
-    toast.warn("Remove product from your wishlist")
+    toast.warn("Remove product from your wishlist", {
+        position: 'top-center'
+    })
 }
 
 

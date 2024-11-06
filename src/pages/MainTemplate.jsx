@@ -6,6 +6,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const MainTemplate = () => {
+    
     return (
         <div className="">
            <Navbar></Navbar>

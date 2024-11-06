@@ -14,11 +14,14 @@ import Details from "../pages/Details";
 
 import WishList from "../components/WishList";
 import Cart from "../components/Cart";
+import About from "../pages/About";
+import ErrorPage from "../pages/ErrorPage";
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <MainTemplate></MainTemplate>,
+        errorElement: <ErrorPage></ErrorPage>,
         children: [
             {
                 path: '/',
@@ -79,6 +82,10 @@ const router = createBrowserRouter([
                         element: <WishList></WishList>
                     }
                 ]
+            },
+            {
+                path: '/about',
+                element: <About></About>
             },
             {
                 path: `/details/:productId`,

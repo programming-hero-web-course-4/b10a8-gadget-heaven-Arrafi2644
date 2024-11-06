@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, Outlet, useLoaderData, useParams } from 'react-router-dom';
 import ProductDetails from '../components/ProductDetails';
 import DetailsBanner from '../components/DetailsBanner';
+import { Helmet } from 'react-helmet';
 
 const Details = () => {
 
@@ -22,6 +23,11 @@ const Details = () => {
             <div className='absolute top-1/2 w-full'>
                 <ProductDetails currentProduct={currentProduct}></ProductDetails>
             </div>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>About - Gadget Heaven</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
         </div>
     );
 };
