@@ -25,7 +25,7 @@ const Details = () => {
             </div>
             <Helmet>
                 <meta charSet="utf-8" />
-                <title>About - Gadget Heaven</title>
+                <title>Details - Gadget Heaven</title>
                 <link rel="canonical" href="http://mysite.com/example" />
             </Helmet>
         </div>
