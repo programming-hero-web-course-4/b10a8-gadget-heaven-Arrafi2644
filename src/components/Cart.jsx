@@ -34,18 +34,13 @@ const Cart = () => {
         setProducts(sortedProducts)
     }
 
+    const navigate = useNavigate();
     const handlePurchase = () => {
         const products = [];
         setProducts(products)
          localStorage.removeItem('cart');
          setIsPurchase(true);
-    }
-
-    
-
-    const navigate = useNavigate();
-    const handleBackToHome = () => {
-        navigate('/')
+         navigate('/')
     }
 
 
@@ -94,7 +89,7 @@ const Cart = () => {
     <div className="modal-action justify-center w-full">
       <form method="dialog" className='w-full'>
         {/* if there is a button in form, it will close the modal */}
-        <button onClick={()=>{handlePurchase(), handleBackToHome} } className="btn w-full">Close</button>
+        <button onClick={()=>{handlePurchase()} } className="btn w-full">Close</button>
       </form>
     </div>
   </div>
